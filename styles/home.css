@@ -1,0 +1,158 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("../images/home-background%202.jpg"); /* fixed the backslash issue */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* NAVBAR */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* HERO SECTION */
+.hero-container {
+    height: calc(100vh - 56px); /* Adjust for navbar */
+    backdrop-filter: blur(1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Headings */
+h1.display-1 {
+    font-size: 4rem;
+    color: white;
+}
+h1.display-3 {
+    font-size: 3rem;
+    
+}
+
+/* RRETH NESH SECTION */
+.rreth-nesh {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 60px 4%;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin-top: 5%;
+    width: 100%;
+}
+
+.rreth-nesh-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+
+.about-us {
+    flex: 1;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .hero-container {
+        padding: 0 20px;
+    }
+
+    .hero-container h1 {
+        margin-bottom: 20%;
+    }
+
+    h1.display-1 {
+        font-size: 2.5rem;
+    }
+
+    h1.display-3 {
+        font-size: 2rem;
+    }
+
+    .rreth-nesh {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .about-us {
+        padding-top: 20px;
+    }
+
+    #about-us{
+        margin-top: 30%;
+    }
+
+    
+    .rreth-nesh{
+        margin-top: 30%;
+    }
+}
+
+/* HERO SECTION STYLE */
+.hero-section {
+    margin-top: 7%;
+    padding-left: 4%;
+    background-color: #f3f3f3;
+    width: 100%;
+}
+
+/* Image Styling */
+.vegetables-image {
+    border-radius: 10%;
+}
+
+/* CARD STYLES */
+.card {
+    text-align: center;
+}
+
+.svg {
+    padding-bottom: 15px;
+    margin-right: 8px;
+}
+
+a.card-link {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    position: relative;
+}
+
+a.card-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #005555;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+a.card-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.card-text {
+    color: #00000080;
+}
+
+/* LOCATION SECTION */
+.location {
+    padding-left: 4%;
+    width: 100%;
+}

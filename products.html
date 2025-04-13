@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="./styles/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+  
+  <script defer src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+
+    <script defer>
+    function loadGoogleTranslate() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en', // Change 'en' to your default language code
+        includedLanguages: 'sq,en,de,it', // Albanian, English, German, Italian
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+    </script>  
+
+</head>
+<body>
+    
+<!--Navigation bar-->
+  <nav class="navbar navbar-expand-lg bg-light shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="./images/MerrBio-logo.png" alt="MerrBio Logo" width="40" height="30" class="d-inline-block align-text-top">
+      MerrBio
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link active" href="products.html">Produkte</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" href="about.html">Rreth nesh</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" href="kontakt.html">Kontakt</a>
+        </li>
+      </ul>
+
+      <!-- Right Side: Login/Logout & Cart -->
+      <div class="d-flex align-items-center gap-2">
+        <a id="cart-btn" href="cart.html" class="btn btn-outline-secondary d-none">
+          <i class="fas fa-shopping-cart"></i> Shporta
+        </a>
+        <button id="login-btn" class="btn btn-outline-success" type="button">Log In</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    <header>
+        <h1>Produkte</h1>
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Search products...">
+<select id="categoryFilter">
+  <option value="all">All Categories</option>
+  <option value="vegetable">Perime</option>
+  <option value="fruit">Fruta</option>
+  <option value="dairy">Bulmet</option>
+  <option value="meat">Mish</option>
+  <option value="grains">Drithëra</option>
+</select>
+
+            <button id="sort-price">Filtro sipas çmimit</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="products-container" id="products">
+            <!-- Products will be loaded here by JavaScript -->
+        </div>
+    </main>
+
+    <!--Footer-->
+  <footer class="py-1 container-fluid footer">
+    <div class="row d-flex justify-content-between">
+      <!-- Left section -->
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Navigo</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-body-secondary">Produkte</a></li>
+          <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-body-secondary">Rreth nesh</a></li>
+          <li class="nav-item mb-2"><a href="kontakt.html" class="nav-link p-0 text-body-secondary">Kontakt</a></li>
+          <div id="google_translate_element" class="ms-3"></div>
+    
+        </ul>
+      </div>
+      <!--Kategorite-->
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Produkte</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-body-secondary">Perime</a></li>
+        <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-body-secondary">Fruta</a></li>
+        <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-body-secondary">Bulmet</a></li>
+        <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-body-secondary">Mish</a></li>
+        <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-body-secondary">Drithëra</a></li>
+        </ul>
+      </div>
+      <!--Kontakto-->
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Kontakto</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Facebook</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Instagram</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Linkedin</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">X</a></li>
+        </ul>
+      </div>
+      <!-- Right section -->
+      <div class="col-md-5 mb-3">
+        <form>
+          <h5>Regjistrohu në buletinin tonë</h5>
+          <p>Përmbledhje mujore e asaj që është e re dhe emocionuese nga ne.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Adresa e emailit</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Adresa e emailit">
+            <button class="btn btn-success" type="button">Abonohu</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-center py-1  border-top">
+      <p>© 2025 MerrBio. Të gjitha të drejtat e rezervuara.</p>
+    </div>
+  </footer>
+
+    <!--Bootstrap script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="./script/products.js"></script>
+
+	<script>
+document.addEventListener("DOMContentLoaded", () => {
+  fetch('./backend/get_session_status.php')
+    .then(res => res.json())
+    .then(session => {
+      const loginBtn = document.getElementById("login-btn");
+      const cartBtn = document.getElementById("cart-btn");
+
+      if (session.logged_in) {
+        loginBtn.classList.remove("btn-outline-success");
+        loginBtn.classList.add("btn-danger");
+        loginBtn.textContent = "Log Out";
+        cartBtn.classList.remove("d-none");
+
+        loginBtn.addEventListener("click", () => {
+          fetch('./backend/logout.php')
+            .then(() => window.location.href = "index.html");
+        });
+      } else {
+        loginBtn.addEventListener("click", () => {
+          window.location.href = "login.html";
+        });
+      }
+    });
+});
+
+
+
+const searchInput = document.getElementById("searchInput");
+  const categoryFilter = document.getElementById("categoryFilter");
+  const productCards = document.querySelectorAll(".product-card");
+
+  function filterProducts() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const selectedCategory = categoryFilter.value;
+
+    productCards.forEach(card => {
+      const name = card.dataset.name.toLowerCase();
+      const category = card.dataset.category;
+
+      const matchesSearch = name.includes(searchTerm);
+      const matchesCategory = selectedCategory === "all" || category === selectedCategory;
+
+      if (matchesSearch && matchesCategory) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  searchInput.addEventListener("input", filterProducts);
+  categoryFilter.addEventListener("change", filterProducts);
+</script>
+
+
+</body>
+</html>

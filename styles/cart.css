@@ -1,0 +1,15 @@
+/* Basic styles for the cart page */
+.quantity-control {
+    max-width: 120px;
+}
+
+.product-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+/* Style for empty cart message */
+#empty-cart-message td {
+    padding: 2rem;
+}

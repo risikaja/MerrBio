@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .cart-container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .cart-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding: 15px 0;
+    }
+
+    .cart-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+
+    .item-info {
+      flex: 1;
+    }
+
+    .item-info h4 {
+      margin: 0;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .item-info p {
+      margin: 5px 0;
+      color: #666;
+    }
+
+    .total-summary {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    button{
+      background-color: green;
+      color: white;
+      margin-left: 82.5%;
+      margin-top: 10px;
+      border-radius: 15px;
+      border-color:transparent;
+      width: 130px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="cart-container">
+    <h2>🛒 My Shopping Cart</h2>
+    <div id="cart-items"></div>
+    <div id="total-summary" class="total-summary"></div>
+  <a href="./index.html"> <button value="Check Out" >Check out</button></a> 
+  </div>
+  
+
+  <script>
+    fetch('backend/get_cart_items.php')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('cart-items');
+        const summary = document.getElementById('total-summary');
+
+        if (data.error) {
+          container.innerHTML = `<p>${data.error}</p>`;
+          return;
+        }
+
+        if (data.length === 0) {
+          container.innerHTML = "<p>Your cart is empty.</p>";
+          return;
+        }
+
+        let totalPrice = 0;
+
+        data.forEach(item => {
+          const div = document.createElement('div');
+          div.classList.add('cart-item');
+
+          const itemTotal = item.price * item.quantity;
+          totalPrice += itemTotal;
+
+          div.innerHTML = `
+            <img src="images/${item.image}" alt="${item.product_name}">
+            <div class="item-info">
+              <h4>${item.product_name}</h4>
+              <p>Price: $${item.price}</p>
+              <p>Quantity: ${item.quantity}</p>
+              <p>Total: $${itemTotal.toFixed(2)}</p>
+              <p>Added: ${item.added_at}</p>
+              <p>Status: ${item.status}</p>
+            </div>
+          `;
+          container.appendChild(div);
+        });
+
+        summary.textContent = `Grand Total: $${totalPrice.toFixed(2)}`;
+      })
+      .catch(err => {
+        document.getElementById('cart-items').innerHTML = `<p>Error loading cart.</p>`;
+       
+      });
+  </script>
+</body>
+</html>

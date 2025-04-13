@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MerrBio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!--Home css-->
+    <link rel="stylesheet" href="./styles/home.css">
+  
+
+    <script defer src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+
+    <script defer>
+    function loadGoogleTranslate() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en', // Change 'en' to your default language code
+        includedLanguages: 'sq,en,de,it', // Albanian, English, German, Italian
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+    </script>  
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-light shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="./images/MerrBio-logo.png" alt="MerrBio Logo" width="40" height="30" class="d-inline-block align-text-top">
+        MerrBio
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="products.html">Produkte</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="about.html">Rreth nesh</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+          </li>
+        </ul>
+  
+        <!-- Right Side: Login/Logout & Cart -->
+        <div class="d-flex align-items-center gap-2">
+          <a id="cart-btn" href="cart.html" class="btn btn-outline-secondary d-none">
+            <i class="fas fa-shopping-cart"></i> Shporta
+          </a>
+          <button id="login-btn" class="btn btn-outline-success" type="button">Log In</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!--Hero section-->
+<div class="hero-container d-flex align-items-center">
+  <div class="container text-white">
+      <h1 class="display-3 fw-bold hero-text" style="color: white;" >Merr më të mirën nga natyra</h1>
+      <h1 class="display-1 fw-bold" style="color: white;" >MerrBio</h1>
+  </div>
+</div>
+
+      <!--Rreth nesh-->
+      <section id="about-us" style="padding-top: 10%;">
+    <div class="container col-xxl-8 px-4 py-2 rreth-nesh" >
+        <div class="row  align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6  ">
+            <img src="images/rreth nesh.jpg" class="d-block mx-lg-auto img-fluid rreth-nesh-image" alt="rreth-nesh" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Kush Jemi Ne?</h1>
+            <p class="lead"><b>MerrBio</b> është një kompani që ofron produkte dhe shërbime bio të cilësisë më të lartë. Me një angazhim të fortë për mbrojtjen e natyrës dhe shëndetit të konsumatorëve tanë, ne ofrojmë një gamë të gjerë produktesh natyrale dhe të sigurt për përdorim të përditshëm. Kompania jonë ka filluar me një pasion të thjeshtë: t'u ofrojmë konsumatorëve mundësinë për të bërë zgjedhje të shëndetshme dhe të qëndrueshme për jetën e tyre.</p>
+        </div>
+        </div>
+    </div>
+</section>
+
+
+    <!--Our goals-->
+    <section class="background-home">
+        <section class="properties" >
+            
+            <div class="container" data-aos="fade-up" >
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Misioni Ynë</h1>
+              <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="card" data-aos="fade-up">
+                    <div class="card-body" data-aos="fade-up">
+                      <div class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-bandaid" viewBox="0 0 16 16">
+                            <path d="M14.121 1.879a3 3 0 0 0-4.242 0L8.733 3.026l4.261 4.26 1.127-1.165a3 3 0 0 0 0-4.242M12.293 8 8.027 3.734 3.738 8.031 8 12.293zm-5.006 4.994L3.03 8.737 1.879 9.88a3 3 0 0 0 4.241 4.24l.006-.006 1.16-1.121ZM2.679 7.676l6.492-6.504a4 4 0 0 1 5.66 5.653l-1.477 1.529-5.006 5.006-1.523 1.472a4 4 0 0 1-5.653-5.66l.001-.002 1.505-1.492z"/>
+                            <path d="M5.56 7.646a.5.5 0 1 1-.706.708.5.5 0 0 1 .707-.708Zm1.415-1.414a.5.5 0 1 1-.707.707.5.5 0 0 1 .707-.707M8.39 4.818a.5.5 0 1 1-.708.707.5.5 0 0 1 .707-.707Zm0 5.657a.5.5 0 1 1-.708.707.5.5 0 0 1 .707-.707ZM9.803 9.06a.5.5 0 1 1-.707.708.5.5 0 0 1 .707-.707Zm1.414-1.414a.5.5 0 1 1-.706.708.5.5 0 0 1 .707-.708ZM6.975 9.06a.5.5 0 1 1-.707.708.5.5 0 0 1 .707-.707ZM8.39 7.646a.5.5 0 1 1-.708.708.5.5 0 0 1 .707-.708Zm1.413-1.414a.5.5 0 1 1-.707.707.5.5 0 0 1 .707-.707"/>
+                          </svg>
+                    </div>
+                      <h5 class="card-title" data-aos="fade-up">Angazhimi Ynë për Shëndetin dhe Sigurinë</h5>
+                      <p class="card-text" data-aos="fade-up">MerrBio është e përkushtuar të ofrojë produkte që janë të pastra, të natyrshme dhe të sigurt për përdorim të përditshëm.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="card" data-aos="fade-up">
+                    <div class="card-body" data-aos="fade-up">
+                      <div class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-recycle" viewBox="0 0 16 16">
+                            <path d="M9.302 1.256a1.5 1.5 0 0 0-2.604 0l-1.704 2.98a.5.5 0 0 0 .869.497l1.703-2.981a.5.5 0 0 1 .868 0l2.54 4.444-1.256-.337a.5.5 0 1 0-.26.966l2.415.647a.5.5 0 0 0 .613-.353l.647-2.415a.5.5 0 1 0-.966-.259l-.333 1.242zM2.973 7.773l-1.255.337a.5.5 0 1 1-.26-.966l2.416-.647a.5.5 0 0 1 .612.353l.647 2.415a.5.5 0 0 1-.966.259l-.333-1.242-2.545 4.454a.5.5 0 0 0 .434.748H5a.5.5 0 0 1 0 1H1.723A1.5 1.5 0 0 1 .421 12.24zm10.89 1.463a.5.5 0 1 0-.868.496l1.716 3.004a.5.5 0 0 1-.434.748h-5.57l.647-.646a.5.5 0 1 0-.708-.707l-1.5 1.5a.5.5 0 0 0 0 .707l1.5 1.5a.5.5 0 1 0 .708-.707l-.647-.647h5.57a1.5 1.5 0 0 0 1.302-2.244z"/>
+                          </svg>
+                    </div>
+                      <h5 class="card-title">Qëndrueshmëria në Fokusin Tonë</h5>
+                      <p class="card-text">Përmes përdorimit të materialeve të riciklueshme në çdo fazë të prodhimit, të kontribuojmë në një të ardhme më të gjelbër.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="card" data-aos="fade-up">
+                    <div class="card-body" data-aos="fade-up">
+                      <div class="svg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                      </svg>
+                    </div>
+                      <h5 class="card-title">Të Ndihmojmë Konsumatorët</h5>
+                      <p class="card-text">Pjesë e misionit tonë është edukimi i konsumatorëve për rëndësinë e përdorimit të produkteve natyrale dhe të qëndrueshme.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="card" data-aos="fade-up">
+                    <div class="card-body" data-aos="fade-up">
+                      <div class="svg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                        <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"/>
+                      </svg>
+                    </div>
+                      <h5 class="card-title">Sigurojmë Transparencë dhe Besueshmëri</h5>
+                      <p class="card-text">Transparenca në çdo hap të procesit është e rëndësishme për ne, për t'u siguruar se klientët tanë kanë besim të plotë në markën tonë.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+      <!--Our locations-->
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5 container-fluid location">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="./images/albania map.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="200" height="140" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Gjeni Pikat tona të Shërbimit në Shqipëri</h1>
+          <p class="lead">Ne operojmë në disa qytete të Shqipërisë, duke ofruar shërbime të cilësisë së lartë për çdo klient. Më poshtë mund të shihni hartën që tregon vendet ku mund të na gjeni dhe përfitoni nga shërbimet tona.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="kontakt.html"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2 btn-success">Kontakto</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Blog-->
+      <!-- Hero section -->
+  <div class="hero-section container-fluid">
+    <div class="container-fluid">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="./images/vegetables.jpg" class="d-block mx-lg-auto img-fluid vegetables-image" alt="vegetables" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Ushqimet BIO, shtatë truket për t'i njohur</h1>
+          <p class="lead">Nuk dini se çfarë të vendosni në karrocën e shopingut? Ja sekretet e fshehura në etiketat e produkteve ushqimore rreth natyralitetit të tyre
+
+
+
+            Ushqimet BIO janë ato ushqime që i kanë ruajtur përbërësit e tyre natyralë dhe që nuk kanë përbërës të shtuar artificialisht apo kanë pësuar kontaminime gjatë prodhimit, përpunimit dhe tregtimit të tyre.
+            
+            
+            “Logoja e prodhimit biologjik e Bashkimit Europian”, nuk është gjë tjetër veçse një fletë e sterilizuar, konturet e së cilës përcaktohen nga yjet e vegjël të BE-së.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="https://gazeta-shqip.com/ndryshe/ushqimet-bio-shtate-truket-per-ti-njohur/"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2 btn-success">Lexo më shumë</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      <!--Footer-->
+  <footer class="py-1 container-fluid footer">
+    <div class="row d-flex justify-content-between">
+      <!-- Left section -->
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Navigo</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-body-secondary">Produkte</a></li>
+          <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-body-secondary">Rreth nesh</a></li>
+          <li class="nav-item mb-2"><a href="kontakt.html" class="nav-link p-0 text-body-secondary">Kontakt</a></li>
+          <div id="google_translate_element" class="ms-3"></div>
+        </ul>
+      </div>
+      <!--Kategorite-->
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Produkte</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-body-secondary">Perime</a></li>
+        <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-body-secondary">Fruta</a></li>
+        <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-body-secondary">Bulmet</a></li>
+        <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-body-secondary">Mish</a></li>
+        <li class="nav-item mb-2"><a href="products.html" class="nav-link p-0 text-body-secondary">Drithëra</a></li>
+        </ul>
+      </div>
+      <!--Kontakto-->
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Kontakto</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Facebook</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Instagram</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Linkedin</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">X</a></li>
+        </ul>
+      </div>
+      <!-- Right section -->
+      <div class="col-md-5 mb-3">
+        <form>
+          <h5>Regjistrohu në buletinin tonë</h5>
+          <p>Përmbledhje mujore e asaj që është e re dhe emocionuese nga ne.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Adresa e emailit</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Adresa e emailit">
+            <button class="btn btn-success" type="button">Abonohu</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-center py-1  border-top">
+      <p>© 2025 MerrBio. Të gjitha të drejtat e rezervuara.</p>
+    </div>
+  </footer>
+
+      <!--Bootstrap script-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+
+
+      <script defer src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          fetch('./backend/get_session_status.php')
+            .then(res => res.json())
+            .then(session => {
+              const loginBtn = document.getElementById("login-btn");
+              const cartBtn = document.getElementById("cart-btn");
+        
+              if (session.logged_in) {
+                loginBtn.classList.remove("btn-outline-success");
+                loginBtn.classList.add("btn-danger");
+                loginBtn.textContent = "Log Out";
+                cartBtn.classList.remove("d-none");
+        
+                loginBtn.addEventListener("click", () => {
+                  fetch('./backend/logout.php')
+                    .then(() => window.location.href = "index.html");
+                });
+              } else {
+                loginBtn.addEventListener("click", () => {
+                  window.location.href = "login.html";
+                });
+              }
+            });
+        });
+        </script>
+    
+    </body>
+
+</html>
